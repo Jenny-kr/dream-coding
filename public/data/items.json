@@ -1,0 +1,27 @@
+[
+    {
+        "id": "1",
+        "text": "laundry",
+        "status": "active" 
+    },
+    {
+        "id": "2",
+        "text": "reading a book",
+        "status": "active" 
+    },
+    {
+        "id": "3",
+        "text": "reading Bible",
+        "status": "active" 
+    },
+    {
+        "id": "4",
+        "text": "lunch",
+        "status": "active" 
+    },
+    {
+        "id": "5",
+        "text": "going out",
+        "status": "active" 
+    }
+]
