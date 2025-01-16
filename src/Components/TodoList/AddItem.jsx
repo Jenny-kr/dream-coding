@@ -8,12 +8,13 @@ export default function AddItem({onAdd}) {
         
     }
     const [text, setText] = useState('')
+    
     const handleSubmit = (e) => {
         e.preventDefault();
         if (text.trim() === 0) {
             return;
         }
-        onAdd({id: uuidv4() , text: text});
+        onAdd({id: uuidv4() , text: text, status: 'active'});
         setText('');
     }
     return(
@@ -26,8 +27,8 @@ export default function AddItem({onAdd}) {
                 value={text}
                 onChange={handleChange}
                 />
-            <button className={styles.button}>Add</button>
-                </form>
+                <button className={styles.button}>Add</button>
+            </form>
         </div>
     )
 }

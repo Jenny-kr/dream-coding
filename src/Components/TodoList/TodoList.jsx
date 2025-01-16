@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import AddItem from "./AddItem";
 import Todo from "../Todos/Todo";
 import styles from './TodoList.module.css'
@@ -23,6 +23,9 @@ export default function TodoList({filter}) {
         setTodos(todos.filter((t) => t.id !== deleted.id))
     }
 
+    useEffect(() => {
+        localStorage.setItem('todos', JSON.stringify(todos))
+    }, [todos]);
 
     const filtered = getFilteredItems(todos, filter);
 
